@@ -2,12 +2,12 @@
 
 require_once 'include/conexaoBD.php';
 
-// Verifica se as informações de `cadastrar.php` foram recebidas com sucesso
+
 if (isset($_POST['titulo'], $_POST['conteudo'])) {
-    // Instância a Pergunta
  
-    
-    $user_id = "1";
+    //Criar lógica para verificar se há usuaário logado    
+    $user_id = "1"; //Criar lógica para buscar no banco de dados o id do usuário logado
+
     if (isset($_POST['titulo'])) {
         $titulo = mysqli_escape_string($connection, $_POST['titulo']);
         $conteudo = mysqli_escape_string($connection, $_POST['conteudo']);
