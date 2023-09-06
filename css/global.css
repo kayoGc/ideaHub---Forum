@@ -1,31 +1,66 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 :root {
-    --titulo: #c9d1d9;
-    --fundo: ##0d1117;
-    --fundo-header: #010409;
-    --texto-header: #c9d1d9;
-    --texto: #c9d1d9;
-    --placeholder: #c9d1d9;
-    --placeholder-focus: white;
+    /* FUNDOS --------------------------- */
 
-    --placeholder-date: gray;
+    --fundo: #0d1117;
+    --fundo-header: #010409;
+    --fundo-barra-pesquisa: #010409;
+
+    /*-------------------------------------*/
+
+    /* TEXTOS ----------------------------------*/
+
+    --titulo: #c9d1d9;
+    /* texto da página no geral */
+    --texto: #c9d1d9;
+    /* texto do menu de cima */
+    --texto-header: #c9d1d9;
+    /* cor do texto quando digita no input */
+    --texto-input: black;
+
+    /*------------------------------------------*/
+
+    /* LINKS, ICONES NO HEADER ----------------- */
 
     --link: #c9d1d9;
+    /* quando o mouse ta em cima */
     --link-hover: white;
 
-    --barra-pesquisa: #010409;
-    --borda-pesquisa: #c9d1d9;
+    /* ----------------------------------------- */
 
-    --icone: #38bdf8;
 
-    --borda: #c9d1d9;
+
+
+    /* PLACEHOLDERS -------------------------------------------------------*/
+
+    /* textos na barra de pesquisa e nos inputs das telas login e cadastro */
+    --placeholder: #c9d1d9;
+    --placeholder-focus: white;
+    --placeholder-input-focus: #c9d1d9;
+    /* cor da data no card da pergunta */
+    --placeholder-date: gray;
+
+    /*----------------------------------------------------------------------*/
+
+    /* CORES DAS BORDAS -----------------------*/
+
+    --borda-header: #c9d1d9;
+    --borda-barra-pesquisa: #c9d1d9;
+    /* inputs das telas de login e cadastro */
     --borda-input: #c9d1d9;
-    --input-focus: #c9d1d9;
-    --texto-input: #c9d1d9;
+    --borda-card: #c9d1d9;
 
+    /*----------------------------------------*/
+
+    /* OUTROS --------------*/
+    
+    /* icones do card */
+    --icone: #38bdf8;
     --hamburguer: #c9d1d9;
+
+    /*----------------------*/
+
 }
 
 * {
@@ -35,13 +70,15 @@
     box-sizing: border-box;
 }
 
-
-
-
 body {
     background-color: var(--fundo);
     color: var(--texto);
     font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
 }
 
 .preto {
@@ -60,6 +97,7 @@ body {
     height: 24px;
     padding-inline: 1rem;
 }
+
 /*--------------*/
 
 
@@ -77,12 +115,14 @@ body {
 
 .logo h1 {
     color: var(--titulo);
+    font-size: 1rem;
     font-weight: bold;
+    margin: 0;
 }
 
 .caixa-nav {
     background-color: var(--fundo-header);
-    border-bottom: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda-header);
     position: fixed;
     display: flex;
     align-items: center;
@@ -91,7 +131,7 @@ body {
     justify-content: space-between;
     padding: 0.3rem 0.5rem;
     box-sizing: border-box;
-}   
+}
 
 .pesquisa {
     position: relative;
@@ -99,6 +139,7 @@ body {
     align-items: center;
     justify-self: center;
     padding: 0 0.1rem;
+
 }
 
 .iconePesquisa {
@@ -111,9 +152,10 @@ body {
 .barraPesquisa {
     width: 30rem;
     padding: 0.3rem 1.5rem;
-    background-color: var(--barra-pesquisa);
+    background-color: var(--fundo-barra-pesquisa);
     border-radius: 30px;
-    border: 1px solid var(--borda-pesquisa);
+    border: 1px solid var(--borda-barra-pesquisa);
+    max-height: 37px;
 }
 
 .barraPesquisa::placeholder {
@@ -129,6 +171,8 @@ body {
     color: var(--placeholder-focus);
 }
 
+
+
 .caixa-nav li {
     list-style: none;
 }
@@ -142,9 +186,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 }
 
-.nav-link{
+.nav-link {
     display: flex;
     align-items: center;
     padding: 0 0.3rem;
@@ -173,7 +218,7 @@ body {
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
     background-color: var(--hamburguer);
 }
 
@@ -195,7 +240,6 @@ main {
 .bem-vindo {
     font-size: 1.5rem;
     color: var(--titulo);
-    padding-top: 2rem;
 }
 
 /* CARD */
@@ -203,7 +247,7 @@ main {
 .card {
     min-width: 18rem;
     max-width: 18rem;
-    border: 1px solid var(--borda);
+    border: 1px solid var(--borda-card);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -250,6 +294,7 @@ main {
 .date {
     color: var(--placeholder-date);
 }
+
 /*--------------------------*/
 
 
@@ -262,6 +307,7 @@ main {
     * {
         font-size: 17px;
     }
+
     .card {
         min-width: 21rem;
         max-width: 21rem;
@@ -281,16 +327,14 @@ main {
     }
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
 
     .barraPesquisa {
         max-width: 10rem;
     }
 }
 
-@media screen and (min-width: 768px) {
-
-}
+@media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 768px) {
     /* Tablet para cima */
@@ -321,7 +365,7 @@ main {
         min-width: 32rem;
         max-width: 32rem;
     }
-    
+
 }
 
 @media screen and (max-width: 1023px) {
@@ -332,9 +376,11 @@ main {
     .hamburguer.active .bar:nth-child(2) {
         opacity: 0;
     }
+
     .hamburguer.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
+
     .hamburguer.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
@@ -399,14 +445,3 @@ main {
         font-size: 26px;
     }
 }
-
-.fundoTelaCadastro, .fundoTelaListagem{
-    background-color: #0d1117;
-    color: white;
-    text-align: -webkit-center;
-}
-
-.titleNovaPergunta{
-    margin-top: 2rem!important;
-}
-

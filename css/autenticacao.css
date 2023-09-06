@@ -64,8 +64,8 @@
     /* Quando tiver texto dentro do input */
     color: var(--input-focus);
     transform: translate(10px, -7px);
-    border-left: 1px solid var(--input-focus);
-    border-right: 1px solid var(--input-focus);
+    border-left: 1px solid var(--placeholder-input-focus);
+    border-right: 1px solid var(--placeholder-input-focus);
     font-size: 0.65em;
     padding: 0 10px;
     background: var(--fundo);
@@ -75,7 +75,7 @@
 
 .auCaixa-input input:focus,
 .auCaixa-input input:not(:placeholder-shown) {
-    border: 1px solid var(--input-focus);
+    border: 1px solid var(--placeholder-input-focus);
 }
 
 .auBotoes {
@@ -111,7 +111,7 @@
 
 @media screen and (min-width: 760px) {
     .auCaixa-form {
-        border: 1px solid var(--borda);
+        border: 1px solid var(--borda-input);
     }
 
     .auPrincipal {
