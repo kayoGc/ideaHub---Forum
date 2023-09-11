@@ -11,9 +11,7 @@
 
     <!-- CSS normal (sempre depois) -->
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/perguntas.css">
-    <link rel="stylesheet" href="css/autenticacao.css">
-  
+    
 </head>
 <body>
     <header>

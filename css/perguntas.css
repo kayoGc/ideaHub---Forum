@@ -1,3 +1,13 @@
+main {
+    align-items: stretch;
+    padding: 0 6rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .pPrincipal {
     position: absolute;
     display: flex;
@@ -10,12 +20,6 @@
 
 .pPrincipal h2 {
     font-size: 1.5rem;
-}
-
-.pCaixa-inputs {
-    display: flex;
-    flex-direction: column;
-    min-width: 20rem;
 }
 
 .pInput {
